@@ -3,12 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Conversion;
+package IConversion;
 
 /**
  *
  * @author ASUS
  */
 public interface IConversion {
-    void convertir();
+    void convertir(double cantidad);
+    public double getDolar();
+    public double getEuro();
+    public double getLibra();
 }

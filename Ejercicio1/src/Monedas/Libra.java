@@ -5,19 +5,35 @@
  */
 package Monedas;
 
-import Conversion.IConversion;
+import Conversiones.ConversionLibra;
+
 
 /**
  *
  * @author ASUS
  */
-public class Libra implements IConversion{
-    private double euro;
+public class Libra extends ConversionLibra{
+    double valor;
+    
     
     
     @Override
-    public void convertir() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public double libra_euro(double cantidad) {
+        this.valor=cantidad*1.18;
+        return this.valor;
     }
+
+    @Override
+    public double libra_libra(double cantidad) {
+        this.valor=cantidad;
+        return this.valor;
+    }
+
+    @Override
+    public double libra_dolar(double cantidad) {
+        this.valor=cantidad*1.39;
+        return this.valor;
+    }
+    
     
 }
